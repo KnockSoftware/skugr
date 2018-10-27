@@ -1,4 +1,4 @@
 module CCryptoOpenSSL {
-    umbrella "/Users/admin/Developer/skugr/.build/checkouts/crypto.git--4434416596728109765/Sources/CCryptoOpenSSL/include"
+    umbrella "/Users/admin/Developer/skugr/.build/checkouts/crypto.git--5141418828242322285/Sources/CCryptoOpenSSL/include"
     export *
 }

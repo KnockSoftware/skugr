@@ -1,4 +1,4 @@
 module CNIOSHA1 {
-    umbrella "/Users/admin/Developer/skugr/.build/checkouts/swift-nio.git--7643795777078137768/Sources/CNIOSHA1/include"
+    umbrella "/Users/admin/Developer/skugr/.build/checkouts/swift-nio.git-3961725420888867492/Sources/CNIOSHA1/include"
     export *
 }

@@ -1,4 +1,4 @@
 module CNIODarwin {
-    umbrella "/Users/admin/Developer/skugr/.build/checkouts/swift-nio.git--7643795777078137768/Sources/CNIODarwin/include"
+    umbrella "/Users/admin/Developer/skugr/.build/checkouts/swift-nio.git-3961725420888867492/Sources/CNIODarwin/include"
     export *
 }

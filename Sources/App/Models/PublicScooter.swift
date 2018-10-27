@@ -9,8 +9,8 @@ import Foundation
 
 final class PublicScooter: Codable {
     var uid: String
-    var longitude: Float
-    var latitude: Float
+    var longitude: Double
+    var latitude: Double
     var reserved: Bool
     var disabled: Bool
     

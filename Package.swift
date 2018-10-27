@@ -11,10 +11,13 @@ let package = Package(
         .package(url: "https://github.com/vapor/fluent-sqlite.git", from: "3.0.0"),
         
         // A job system for Swift backends
-        .package(url: "https://github.com/BrettRToomey/Jobs.git", from: "1.1.1")
+        .package(url: "https://github.com/BrettRToomey/Jobs.git", from: "1.1.1"),
+        
+        // Location-related APIs intended to be used by server-side Swift applications since there is no CoreLocation on Linux.
+        .package(url: "https://github.com/petrpavlik/GeoSwift.git", from: "1.0.4")
     ],
     targets: [
-        .target(name: "App", dependencies: ["FluentSQLite", "Vapor", "Jobs"]),
+        .target(name: "App", dependencies: ["FluentSQLite", "Vapor", "Jobs", "GeoSwift"]),
         .target(name: "Run", dependencies: ["App"]),
         .testTarget(name: "AppTests", dependencies: ["App"])
     ]

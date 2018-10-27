@@ -7,10 +7,17 @@
 
 import Foundation
 import FluentSQLite
+import GeoSwift
 
 final class WorldController {
-    static func randomLocation()->(latitude: Float, longitude: Float) {
-        return (Float.random(in: 420000...430000)/10000, Float.random(in: 420000...430000)/10000)
+    static let portlandCoord = try! GeoCoordinate2D(latitude: 45.5122, longitude: -122.6587)
+    
+    static func randomLocation()->GeoCoordinate2D {
+        let distanceScale:Double = 100 // crappy way to do this
+        let latOffset = Double.random(in: 0..<1)/distanceScale
+        let longOffset = Double.random(in: 0..<1)/distanceScale
+        
+        return try! GeoCoordinate2D(latitude: WorldController.portlandCoord.latitude + latOffset, longitude: WorldController.portlandCoord.longitude + longOffset)
     }
     
     func updateWorld(_ conn: SQLiteConnection)->EventLoopFuture<Void> {

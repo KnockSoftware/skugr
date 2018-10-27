@@ -12,13 +12,8 @@ final class Scooter: SQLiteModel {
     var reserved: Bool
     var disabled: Bool
     
-    private enum CodingKeys: String, CodingKey {
-        case reserved = "is_reserved"
-        case disabled = "is_disabled"
-        case latitude = "lat"
-        case longitude = "lon"
-        case uid = "bike_id"
-        case id
+    var `public`: PublicScooter {
+        return PublicScooter(scooter: self)
     }
 
     /// Creates a new `Scooter`.

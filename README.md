@@ -1,3 +1,4 @@
+![Skugr Logo](skugr.png)
 To install Vapor, follow one of the guides here:
 https://docs.vapor.codes/3.0/install/macos/  
 https://docs.vapor.codes/3.0/install/ubuntu/

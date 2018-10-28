@@ -11,7 +11,7 @@ public func app(_ env: Environment) throws -> Application {
     try boot(app)
     
     let world = WorldController()
-    Jobs.add(interval: .seconds(10)) {
+    Jobs.add(interval: .seconds(20)) {
         let _ = app.withNewConnection(to: .sqlite) { conn in
             world.updateWorld(conn)
         }

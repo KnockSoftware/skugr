@@ -24,7 +24,7 @@ final class WorldController {
         print("🌍 Updating world")
         
         return Scooter.query(on: conn).filter(\Scooter.reserved == false).all().map { freeScooters in
-            for _ in 0...freeScooters.count/20 {
+            for _ in 0...freeScooters.count/50 {
                 // start a trip for a 20th of the unreserved fleet
                 if let scoot = freeScooters.random {
                     scoot.reserved = true
@@ -33,8 +33,8 @@ final class WorldController {
             }
             }.then {
                 Scooter.query(on: conn).filter(\Scooter.reserved == true).all().map { reservedScooters in
-                    for _ in 0...reservedScooters.count/20 {
-                        // end a trip for a 20th of the unreserved fleet
+                    for _ in 0...reservedScooters.count/5 {
+                        // end a trip for a 5th of the unreserved fleet
                         if let scoot = reservedScooters.random {
                             scoot.reserved = false
                             let randomLocation = WorldController.randomLocation()

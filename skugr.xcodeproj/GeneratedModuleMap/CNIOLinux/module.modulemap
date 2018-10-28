@@ -1,4 +1,4 @@
 module CNIOLinux {
-    umbrella "/Users/admin/Developer/skugr/.build/checkouts/swift-nio.git-3961725420888867492/Sources/CNIOLinux/include"
+    umbrella "/Users/admin/Developer/skugr/.build/checkouts/swift-nio.git-635241527018043347/Sources/CNIOLinux/include"
     export *
 }

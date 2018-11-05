@@ -10,11 +10,13 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     let router = EngineRouter.default()
     try routes(router)
     services.register(router, as: Router.self)
+    
+    let rateLimiter = RateLimitController.rateLimiter
 
     /// Register middleware
     var middlewares = MiddlewareConfig() // Create _empty_ middleware config
-    /// middlewares.use(FileMiddleware.self) // Serves files from `Public/` directory
     middlewares.use(ErrorMiddleware.self) // Catches errors and converts to HTTP response
+    middlewares.use(rateLimiter)
     services.register(middlewares)
 
     // Configure a SQLite database
@@ -30,5 +32,4 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     migrations.add(model: Scooter.self, database: .sqlite)
     migrations.add(migration: CreateScooterFleet.self, database: .sqlite)
     services.register(migrations)
-
 }

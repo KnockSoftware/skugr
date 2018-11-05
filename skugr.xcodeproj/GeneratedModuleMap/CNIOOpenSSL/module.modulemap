@@ -1,4 +1,4 @@
 module CNIOOpenSSL {
-    umbrella "/Users/admin/Developer/skugr/.build/checkouts/swift-nio-ssl.git--2775673833689999174/Sources/CNIOOpenSSL/include"
+    umbrella "/Users/william/dev/skugr/.build/checkouts/swift-nio-ssl.git-1867461642326245344/Sources/CNIOOpenSSL/include"
     export *
 }

@@ -14,7 +14,7 @@ let package = Package(
         .package(url: "https://github.com/BrettRToomey/Jobs.git", from: "1.1.1"),
 //
 //        // Location-related APIs intended to be used by server-side Swift applications since there is no CoreLocation on Linux.
-        .package(url: "https://github.com/petrpavlik/GeoSwift.git", from: "1.0.4"),
+        .package(url: "https://github.com/petrpavlik/GeoSwift.git", from: "1.0.5"),
 //
 //        // 👮 Vapor 3 based API Guardian Middleware
         .package(url: "https://github.com/KnockSoftware/Guardian.git", from: "3.0.3")
